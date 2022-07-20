@@ -1,0 +1,11 @@
+.bi{
+    color:#1CD8D2;
+    cursor: pointer;
+  }
+  #eye{
+    font-size: large;
+    position: absolute;
+    right: 0.8rem;
+    top: 0.1rem;
+    cursor: pointer;
+  }

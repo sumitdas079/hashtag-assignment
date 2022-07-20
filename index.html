@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashtag-Assignment</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="card" style="border-radius: 1rem;">
+        <div class="row g-0 d-flex">
+            <div class="col-sm-6 text-black">
+
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5 d-sm-block">
+
+                    <form style="width:23rem;" role='form' onsubmit="registerdata(e);" autocomplete="off">
+
+                        <h3 class="fw-bolder mb-3 text-dark">
+                            Register
+                        </h3>
+
+                        <!--Name requirements-->
+                        <div class="form-outline form mb-2">
+                            <input type="text" id="FullName" class="form-control shadow-none" placeholder="Full Name"
+                                autocomplete="off" required>
+                            <small id="fnamevalid" class="form-text text-danger text-muted invalid-feedback">
+                                Invalid input
+                            </small>
+                        </div>
+
+                        <!--Email requirements-->
+                        <div class="form-outline form mb-2">
+                            <input type="email" id="Emailform" class="form-control shadow-none"
+                                placeholder="Email address" autocomplete="off" required>
+                            <small id="emailvalid" class="form-text text-danger text-muted invalid-feedback">
+                                Invalid Email. Your email must contain letters or numbers or both. E.g, abcde1234@gmail.com
+                            </small>
+                        </div>
+
+                        <!--Phone number-->
+                        <div class="form-outline form mb-2">
+                            <input type="number" id="Phonenumber" class="form-control shadow-none"
+                                placeholder="Phone number" autocomplete="off" required>
+                                <small id="phnovalid" class="form-text text-danger text-muted invalid-feedback">
+                                    Invalid Phone number
+                                </small>
+                        </div>
+
+                        <!--DOB-->
+                        <div class="col">
+                            <input type="text" class="form-control shadow-none" placeholder="Enter date of birth as dd/mm/yyyy" id="datepicker">
+                            <small id="agevalid" class="form-text text-danger text-muted invalid-feedback">
+                                You must be 18 years of age or older
+                            </small>
+                            <span id="Age"></span> 
+                        </div>
+
+                        <!--Password requirements-->
+                        <div class="form-outline mt-3 mb-3" id="input">
+
+                            <input type="password" id="CreatePass" class="form-control shadow-none"
+                                placeholder="Create Password" autocomplete="off" required>
+                            <i class="bi bi-eye-fill" id="eye" onclick="showpassword()"></i>
+                            <small id="passwordvalid" class="form-text text-danger text-muted invalid-feedback">
+                                Invalid Password
+                            </small>
+                            <div id="passwordHelpBlock" class="form-text" style="font-size: 15px;">
+                                Your password must be 8-20 characters long, contain letters and numbers and
+                                must not contain spaces, special characters, or emoji.
+                            </div>
+
+                            <input type="password" id="ConfirmPass" class="form-control shadow-none my-2"
+                                placeholder="Confirm Password" autocomplete="off" required>
+                            <small id="conf-passwordvalid" class="form-text text-danger text-muted invalid-feedback">
+                                Password does not match
+                            </small>
+                        </div>
+
+                        <div class="text-center pt-1 mt-3 mb-2">
+                            <button class="btn btn-success" type="submit" onsubmit="registerdata(e)" id="Register">REGISTER</button>
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <!--User data display-->
+            <div class="d-lg-block col-md-8 col-lg-7 col-xl-6">
+
+                <div id="datatable">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone number</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dispdata">
+                            
+                        <tbody>
+                    <table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
